@@ -1,0 +1,91 @@
+.client {
+    background-color: var(--blue-02);
+    border-radius: 200px 0px 0px;
+    height: 100%;
+    padding: 5% 10% 10%;
+
+    .client-up {
+        display: flex;
+        align-items: center;
+        margin: 0% 0% 7% 15%;
+        padding-top: 7%;
+
+        h2 {
+            color: var(--white);
+            width: 20%;
+            margin-right: 97px;
+        }
+        p {
+            width: 45%;
+            color: var(--white);
+            opacity: 0.6;
+        }
+    }
+    .client-down {
+        width: 70%;
+        margin: 0 auto;
+        border-collapse: collapse;
+        border-style: hidden;
+
+        .client-down_logo {
+            border: 1px solid var(--white);
+            cursor: pointer;
+            &:hover {
+                transform: scale(1.1);
+                transition: 0.3s ease;
+            }
+            &:active {
+                transform: scale(1);
+                transition: 0.3s ease;
+            }
+            h3 {
+                text-align: center;
+                margin: 41px auto;
+                color: var(--white);
+            }
+
+            &:hover {
+                background-color: var(--blue-01);
+            }
+        }
+    }
+}
+@media screen and (max-width: 1200px) {
+}
+@media screen and (max-width: 992px) {
+    .client {
+        .client-down {
+            .client-down_logo {
+                border: 1px solid var(--white);
+                h3 {
+                    text-align: center;
+                    margin: 41px auto;
+                    color: var(--white);
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 768px) {
+    .client {
+        .client-down {
+            .client-down_logo {
+                border: 1px solid var(--white);
+                display: grid;
+            }
+        }
+    }
+}
+@media screen and (max-width: 576px) {
+    .client {
+        .client-up {
+            display: block;
+            margin: 15% 0% 7% 15%;
+
+            h2,
+            p {
+                width: 100%;
+            }
+        }
+    }
+}

@@ -1,0 +1,89 @@
+.background {
+    background-color: var(--blue-02);
+
+    .work {
+        position: relative;
+        width: 90%;
+        height: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: var(--blue-03);
+        border-radius: 0px 200px 0px 0px;
+        padding: 7% 15%;
+        .work-left {
+            h2 {
+                color: var(--white);
+                width: 40%;
+                margin-bottom: 3%;
+            }
+            p {
+                width: 58%;
+                color: var(--white);
+                opacity: 0.6;
+            }
+        }
+        .work-btn {
+            width: 40%;
+            height: 5%;
+            padding: 15px 48px;
+            border-radius: 10px;
+            background: var(--blue-02);
+            color: var(--white);
+            box-shadow: 5px 10px 20px rgba(53, 110, 173, 0.2);
+
+            &:hover {
+                transform: scale(1.1);
+                transition: 0.3s ease;
+            }
+            &:active {
+                transform: scale(1);
+                transition: 0.3s ease;
+            }
+        }
+    }
+}
+@media screen and (max-width: 1200px) {
+    .background {
+        .work {
+            position: relative;
+            padding: 7% 15% 15%;
+            .work-left {
+                display: flex;
+            }
+            .work-btn {
+                position: absolute;
+                top: 70%;
+                width: 220px;
+                height: 56px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .background {
+        .work {
+            .work-left {
+                h2,
+                p {
+                    width: 90%;
+                }
+                display: block;
+            }
+            .work-btn {
+                top: 75%;
+            }
+        }
+    }
+}
+@media screen and (max-width: 576px) {
+    .background {
+        .work {
+            padding: 7% 15% 30%;
+            .work-btn {
+                top: 82%;
+            }
+        }
+    }
+}

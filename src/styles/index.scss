@@ -1,0 +1,57 @@
+@import './reset.scss';
+@import './variables.scss';
+@import './header.scss';
+@import './hero.scss';
+@import './help.scss';
+@import './client.scss';
+@import './work.scss';
+@import './footer.scss';
+@import './form.scss';
+
+@font-face {
+    font-family: 'Galien';
+    src: url('/src/assets/fonts/Galien-Regular.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Gilroy';
+    src: url('/src/assets/fonts/Gilroy-Regular.woff') format('woff');
+}
+
+html,
+body {
+    scroll-behavior: smooth;
+    font-family: 'Gilroy';
+    letter-spacing: 0.05em;
+    background: var(--white);
+    max-width: 1366px;
+    margin: 0 auto;
+}
+
+h1 {
+    font-family: 'Galien';
+    font-size: 64px;
+    font-weight: bold;
+    line-height: 74px;
+    letter-spacing: 0.04em;
+    color: var(--blue-01);
+}
+
+h2 {
+    font-size: 36px;
+    line-height: 46px;
+    font-weight: 600;
+}
+h3 {
+    font-size: 20px;
+    line-height: 30px;
+    font-weight: 600;
+}
+p {
+    font-size: 16px;
+    line-height: 26px;
+}
+
+a {
+    color: var(--white);
+}

@@ -1,0 +1,113 @@
+.footer {
+    width: 90%;
+    height: 100%;
+    background-color: var(--blue-03);
+    padding-bottom: 5%;
+
+    .footer-border {
+        display: flex;
+        width: 80%;
+        padding: 10% 0% 5% 15%;
+        border-top: 1px solid var(--white);
+
+        .footer-left {
+            width: 40%;
+            margin-right: 7%;
+            .footer-left_block {
+                display: flex;
+                align-items: start;
+                color: var(--white);
+
+                img,
+                h4 {
+                    margin-bottom: 33px;
+                    margin-right: 15px;
+                }
+
+                p {
+                    margin-bottom: 24px;
+                }
+            }
+        }
+
+        .footer-center,
+        .footer-right {
+            margin-right: 8%;
+            h3 {
+                color: var(--white);
+                margin-bottom: 32px;
+            }
+            .footer-center_block {
+                margin-bottom: 16px;
+            }
+        }
+    }
+
+    .footer-span {
+        margin-left: 15%;
+        color: var(--white);
+        font-size: 16px;
+        line-height: 26px;
+        opacity: 40%;
+    }
+}
+@media screen and (max-width: 992px) {
+    .footer {
+        .footer-border {
+            display: flex;
+            width: 80%;
+            padding: 7% 0% 5% 7%;
+            border-top: 1px solid var(--white);
+
+            .footer-left {
+                width: 40%;
+                margin-right: 7%;
+            }
+        }
+    }
+}
+@media screen and (max-width: 768px) {
+    .footer {
+        .footer-border {
+            flex-wrap: wrap;
+
+            .footer-left {
+                display: grid;
+                grid-template-rows: 1fr 1fr;
+                grid-template-columns: 1fr 1fr;
+                gap: 0% 15%;
+                margin-right: 50%;
+            }
+
+            .footer-center,
+            .footer-right {
+                margin-top: -7%;
+            }
+            .footer-center {
+                margin-right: 20%;
+            }
+        }
+    }
+}
+@media screen and (max-width: 576px) {
+    .footer {
+        .footer-border {
+            padding: 10% 0% 5% 15%;
+            .footer-left {
+                display: block;
+                width: 100%;
+                margin-right: 0;
+                margin-bottom: 20px;
+            }
+
+            .footer-center,
+            .footer-right {
+                margin: -7% 3% 7%;
+
+                h3 {
+                    margin-bottom: 10px;
+                }
+            }
+        }
+    }
+}

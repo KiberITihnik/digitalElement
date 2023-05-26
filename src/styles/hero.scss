@@ -1,0 +1,102 @@
+.hero {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    background: linear-gradient(
+        0deg,
+        rgba(152, 195, 232, 0.245) 8.84%,
+        rgba(152, 195, 232, 0) 31.12%
+    );
+    .hero-left {
+        margin: 6% 0px 16% 15%;
+
+        h1 {
+            width: 54%;
+            margin-bottom: 32px;
+        }
+        p {
+            width: 36%;
+            margin-bottom: 5%;
+        }
+        a {
+            width: 220px;
+            height: 56px;
+            padding: 15px 48px;
+            border-radius: 10px;
+            background: var(--blue-02);
+            box-shadow: 5px 10px 20px rgba(53, 110, 173, 0.2);
+        }
+        a:hover {
+            transform: scale(1.1);
+            transition: 0.3s ease;
+        }
+    }
+    img {
+        position: absolute;
+        right: 2%;
+        top: 2%;
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .hero {
+        .hero-left {
+            margin: 3% 0px 10% 10%;
+            h1 {
+                font-size: 50px;
+                line-height: 58px;
+                width: 54%;
+                margin-bottom: 32px;
+            }
+            p {
+                width: 45%;
+                margin-bottom: 5%;
+            }
+        }
+        img {
+            width: 45%;
+        }
+    }
+}
+@media screen and (max-width: 768px) {
+    .hero {
+        .hero-left {
+            margin: 3% 0px 10% 7%;
+            h1 {
+                font-size: 45px;
+                line-height: 50px;
+                width: 54%;
+                margin-bottom: 2%;
+            }
+            p {
+                width: 45%;
+                margin-bottom: 5%;
+            }
+        }
+        img {
+            width: 45%;
+        }
+    }
+}
+@media screen and (max-width: 576px) {
+    .hero {
+        .hero-left {
+            margin: 10% 10%;
+            text-align: center;
+            h1 {
+                font-size: 45px;
+                line-height: 50px;
+                width: 100%;
+                margin-bottom: 5%;
+            }
+            p {
+                width: 100%;
+                margin-bottom: 10%;
+            }
+        }
+        img {
+            display: none;
+        }
+    }
+}
