@@ -122,7 +122,46 @@
                         </p>
                     </div>
                     <button data-modal-btn="my_modal" class="work-btn">Let’s Talk</button>
-                    <div data-modal-window="my_modal" class="modal"></div>
+                    <div data-modal-window="my_modal" class="modal">
+                        <form id="form" action="/">
+                            <div class="modal-title">
+                                <h3>SEND US MESSAGE</h3>
+                                <div class="close_modal_window">&times;</div>
+                            </div>
+                            <div class="input-control">
+                                <label for="username">Full Name</label>
+                                <input
+                                    id="username"
+                                    name="username"
+                                    type="text"
+                                    placeholder="Your Name"
+                                />
+                                <div class="error"></div>
+                            </div>
+                            <div class="input-control">
+                                <label for="email">Email</label>
+                                <input
+                                    id="email"
+                                    name="email"
+                                    type="text"
+                                    placeholder="Your Email"
+                                />
+                                <div class="error"></div>
+                            </div>
+                            <div class="input-message">
+                                <label for="message">Message</label>
+                                <input
+                                    id="message"
+                                    name="message"
+                                    type="message"
+                                    placeholder="Your Message"
+                                />
+                                <div class="error"></div>
+                            </div>
+                            <div id="loader" class="hidden">Отправляем...</div>
+                            <button type="submit">SUBMIT</button>
+                        </form>
+                    </div>
                 </section>
             </div>
         </main>
@@ -171,5 +210,8 @@
                 <div class="footer-span">2019 © Afrianska. All rights reserved.</div>
             </footer>
         </div>
+
+        <script src="/src/js/main.js"></script>
+        <script src="/src/js/validForm.js"></script>
     </body>
 </html>
