@@ -3,11 +3,34 @@ const username = document.getElementById('username');
 const email = document.getElementById('email');
 const message = document.getElementById('message');
 
+const data = {
+    name: username.value,
+    email: email.value,
+    message: message.value,
+};
+
 form.addEventListener('submit', (e) => {
     e.preventDefault();
 
     validateInputs();
+
+    const formData = JSON.stringify(data);
+
+    sendData('https://6419d642f398d7d95d4ac24f.mockapi.io/sneakers', formData);
 });
+
+const sendData = async (url, data) => {
+    const response = await fetch(url, {
+        method: 'POST',
+        body: data,
+    });
+
+    if (!response.ok) {
+        throw new Error(`статус ошибки ${response.status}`);
+    }
+
+    return await response.json();
+};
 
 const setError = (element, message) => {
     const inputControl = element.parentElement;
