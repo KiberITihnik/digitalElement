@@ -28,13 +28,6 @@ form.addEventListener('submit', (e) => {
             modal.style.display = 'none';
         }, 2000);
     }
-
-    // loader.classList.add('active');
-    // form.classList.remove('active');
-    // setTimeout(() => {
-    //     loader.classList.remove('active');
-    //     form.classList.add('active');
-    // }, 2000);
 });
 
 const sendData = async (url, formData) => {
