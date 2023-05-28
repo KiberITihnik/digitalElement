@@ -27,7 +27,7 @@
         border-collapse: collapse;
         border-style: hidden;
 
-        .client-down_logo {
+        .client-down__logo {
             border: 1px solid var(--white);
             cursor: pointer;
             &:hover {
@@ -55,7 +55,7 @@
 @media screen and (max-width: 992px) {
     .client {
         .client-down {
-            .client-down_logo {
+            .client-down__logo {
                 border: 1px solid var(--white);
                 h3 {
                     text-align: center;
@@ -69,7 +69,7 @@
 @media screen and (max-width: 768px) {
     .client {
         .client-down {
-            .client-down_logo {
+            .client-down__logo {
                 border: 1px solid var(--white);
                 display: grid;
             }

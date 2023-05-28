@@ -21,49 +21,49 @@
                         vulputate ultrices ut mauris tellus at. Posuere sollicitudin odio tellus
                         elit.
                     </p>
-                    <div class="hero-left_btn"><a href="#">See Our Project</a></div>
+                    <div class="hero-left__btn"><a href="#">See Our Project</a></div>
                 </div>
                 <img src="/src/assets/hero/illustration.png" alt="illustration" />
             </section>
             <section class="help">
                 <h2>What we do to help our client grow in digital era,</h2>
                 <article class="help-card1">
-                    <img class="help-card1_img" src="/src/assets/help/1.svg" alt="1" />
-                    <div class="help-card1_description">
+                    <img class="help-card1__img" src="/src/assets/help/1.svg" alt="1" />
+                    <div class="help-card1__description">
                         <h3>Make Your business To Be Better Famous In Internet</h3>
                         <p>
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
                             tempor incididunt ut labore et dolore magna aliqua.
                         </p>
-                        <div class="help-card1_description_btn">
+                        <div class="help-card1__description_btn">
                             <p>Learn more</p>
                             <img src="/src/assets/help/arrow.svg" alt="arrow" />
                         </div>
                     </div>
                 </article>
                 <article class="help-card2">
-                    <img class="help-card2_img" src="/src/assets/help/2.svg" alt="2" />
-                    <div class="help-card1_description">
+                    <img class="help-card2__img" src="/src/assets/help/2.svg" alt="2" />
+                    <div class="help-card1__description">
                         <h3>Bring Technology To Your Comfrotable Home</h3>
                         <p>
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
                             tempor incididunt ut labore et dolore magna aliqua.
                         </p>
-                        <div class="help-card1_description_btn">
+                        <div class="help-card1__description_btn">
                             <p>Learn more</p>
                             <img src="/src/assets/help/arrow.svg" alt="arrow" />
                         </div>
                     </div>
                 </article>
                 <article class="help-card3">
-                    <img class="help-card3_img" src="/src/assets/help/3.svg" alt="3" />
-                    <div class="help-card1_description">
+                    <img class="help-card3__img" src="/src/assets/help/3.svg" alt="3" />
+                    <div class="help-card1__description">
                         <h3>Build Your Digital Product That Suitable For Your Need</h3>
                         <p>
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
                             tempor incididunt ut labore et dolore magna aliqua.
                         </p>
-                        <div class="help-card1_description_btn">
+                        <div class="help-card1__description_btn">
                             <p>Learn more</p>
                             <img src="/src/assets/help/arrow.svg" alt="arrow" />
                         </div>
@@ -81,30 +81,30 @@
                 <table class="client-down">
                     <tbody>
                         <tr>
-                            <td class="client-down_logo">
+                            <td class="client-down__logo">
                                 <h3>LOGO CLIENT 1</h3>
                             </td>
-                            <td class="client-down_logo">
+                            <td class="client-down__logo">
                                 <h3>LOGO CLIENT 1</h3>
                             </td>
-                            <td class="client-down_logo">
+                            <td class="client-down__logo">
                                 <h3>LOGO CLIENT 1</h3>
                             </td>
-                            <td class="client-down_logo">
+                            <td class="client-down__logo">
                                 <h3>LOGO CLIENT 1</h3>
                             </td>
                         </tr>
                         <tr>
-                            <td class="client-down_logo">
+                            <td class="client-down__logo">
                                 <h3>LOGO CLIENT 1</h3>
                             </td>
-                            <td class="client-down_logo">
+                            <td class="client-down__logo">
                                 <h3>LOGO CLIENT 1</h3>
                             </td>
-                            <td class="client-down_logo">
+                            <td class="client-down__logo">
                                 <h3>LOGO CLIENT 1</h3>
                             </td>
-                            <td class="client-down_logo">
+                            <td class="client-down__logo">
                                 <h3>More Client</h3>
                             </td>
                         </tr>
@@ -121,9 +121,9 @@
                             veniam.
                         </p>
                     </div>
-                    <button data-modal-btn="my_modal" class="work-btn">Let’s Talk</button>
-                    <div data-modal-window="my_modal" class="modal">
-                        <form id="form" action="/">
+                    <button class="open-modal" data-modal-btn="modal">Let’s Talk</button>
+                    <dialog class="modal" data-modal-window="modal">
+                        <form id="form" action="/" method="post">
                             <div class="modal-title">
                                 <h3>SEND US MESSAGE</h3>
                                 <div class="close_modal_window">&times;</div>
@@ -158,10 +158,17 @@
                                 />
                                 <div class="error"></div>
                             </div>
-                            <div id="loader" class="hidden">Отправляем...</div>
+
                             <button type="submit">SUBMIT</button>
                         </form>
-                    </div>
+                        <div id="popUp" class="popUp active">
+                            <img src="./src/assets/check.png" alt="" />
+                            <h2>Thank you! Your application has been sent!</h2>
+                            <div class="popUp-progress">
+                                <div class="popUp-progress__loading"></div>
+                            </div>
+                        </div>
+                    </dialog>
                 </section>
             </div>
         </main>
@@ -169,19 +176,19 @@
             <footer class="footer">
                 <div class="footer-border">
                     <div class="footer-left">
-                        <div class="footer-left_block">
+                        <div class="footer-left__block">
                             <img src="/src/assets/footer/logo.svg" alt="logo" />
                             <h2 class="footer-left block-name">Afrianska</h2>
                         </div>
-                        <div class="footer-left_block">
+                        <div class="footer-left__block">
                             <h4>A.</h4>
                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
                         </div>
-                        <div class="footer-left_block">
+                        <div class="footer-left__block">
                             <h4>T.</h4>
                             <p>+62-812-7313-4321</p>
                         </div>
-                        <div class="footer-left_block">
+                        <div class="footer-left__block">
                             <h4>E</h4>
                             <a href="#">hello.afrian@gmail.com</a>
                         </div>
@@ -189,21 +196,21 @@
                     <div class="footer-center">
                         <h3>About US</h3>
 
-                        <address class="footer-center_block"><a href="#">About</a></address>
-                        <address class="footer-center_block"><a href="#">What We Do</a></address>
-                        <address class="footer-center_block"><a href="#">Project</a></address>
-                        <address class="footer-center_block">
-                            <a href="footer-center_block">How It Work With Us</a>
+                        <address class="footer-center__block"><a href="#">About</a></address>
+                        <address class="footer-center__block"><a href="#">What We Do</a></address>
+                        <address class="footer-center__block"><a href="#">Project</a></address>
+                        <address class="footer-center__block">
+                            <a href="#">How It Work With Us</a>
                         </address>
                     </div>
                     <div class="footer-right">
                         <h3>Follow US</h3>
 
-                        <address class="footer-center_block"><a href="">Instagram</a></address>
-                        <address class="footer-center_block"><a href="">Facebook</a></address>
-                        <address class="footer-center_block"><a href="">LinkedIn</a></address>
-                        <address class="footer-center_block">
-                            <a href="">Youtube</a>
+                        <address class="footer-center__block"><a href="">Instagram</a></address>
+                        <address class="footer-center__block"><a href="">Facebook</a></address>
+                        <address class="footer-center__block"><a href="">LinkedIn</a></address>
+                        <address class="footer-center__block">
+                            <a href="#">Youtube</a>
                         </address>
                     </div>
                 </div>
@@ -211,8 +218,7 @@
             </footer>
         </div>
 
-        <script src="/src/js/main.js"></script>
-        <script src="/src/js/fetchForm.js"></script>
+        <script src="/src/js/openCloseModal.js"></script>
         <script src="/src/js/validForm.js"></script>
     </body>
 </html>

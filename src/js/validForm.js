@@ -2,6 +2,8 @@ const form = document.getElementById('form');
 const username = document.getElementById('username');
 const email = document.getElementById('email');
 const message = document.getElementById('message');
+const modal = document.querySelector('modal');
+const popUp = document.querySelector('popUp');
 
 const data = {
     name: username.value,
@@ -12,17 +14,33 @@ const data = {
 form.addEventListener('submit', (e) => {
     e.preventDefault();
 
-    validateInputs();
-
     const formData = JSON.stringify(data);
 
-    sendData('https://6419d642f398d7d95d4ac24f.mockapi.io/sneakers', formData);
+    let error = validateInputs();
+
+    if (error === 3) {
+        sendData('https://6419d642f398d7d95d4ac24f.mockapi.io/sneakers', formData);
+        form.style.display = 'none';
+        popUp.style.display = 'block';
+
+        setTimeout(() => {
+            popUp.classList.remove('active');
+            modal.style.display = 'none';
+        }, 2000);
+    }
+
+    // loader.classList.add('active');
+    // form.classList.remove('active');
+    // setTimeout(() => {
+    //     loader.classList.remove('active');
+    //     form.classList.add('active');
+    // }, 2000);
 });
 
-const sendData = async (url, data) => {
+const sendData = async (url, formData) => {
     const response = await fetch(url, {
         method: 'POST',
-        body: data,
+        body: formData,
     });
 
     if (!response.ok) {
@@ -60,11 +78,13 @@ const validateInputs = () => {
     const usernameValue = username.value.trim();
     const emailValue = email.value.trim();
     const messageValue = message.value.trim();
+    let error = 0;
 
     if (usernameValue === '') {
         setError(username, 'Username is required');
     } else {
         setSuccess(username);
+        error++;
     }
 
     if (emailValue === '') {
@@ -73,6 +93,7 @@ const validateInputs = () => {
         setError(email, 'Provide a valid email address');
     } else {
         setSuccess(email);
+        error++;
     }
 
     if (messageValue === '') {
@@ -81,5 +102,8 @@ const validateInputs = () => {
         setError(message, 'message must be at least 10 character.');
     } else {
         setSuccess(message);
+        error++;
     }
+
+    return error;
 };

@@ -23,7 +23,7 @@
                 opacity: 0.6;
             }
         }
-        .work-btn {
+        .open-modal {
             width: 40%;
             height: 5%;
             padding: 15px 48px;
@@ -51,7 +51,7 @@
             .work-left {
                 display: flex;
             }
-            .work-btn {
+            .open-modal {
                 position: absolute;
                 top: 70%;
                 width: 220px;
@@ -71,7 +71,7 @@
                 }
                 display: block;
             }
-            .work-btn {
+            .open-modal {
                 top: 75%;
             }
         }
@@ -81,7 +81,7 @@
     .background {
         .work {
             padding: 7% 15% 30%;
-            .work-btn {
+            .open-modal {
                 top: 82%;
             }
         }
